@@ -1,70 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <script>
-        function computerPlay() {
-            let computerChoice;
-            let randomInt = Math.floor(Math.random() * 3) + 1;
-
-            if (randomInt == 1) {
-                computerChoice = "rock";
-            } else if (randomInt == 2) {
-                computerChoice = "paper";
-            } else if (randomInt == 3) {
-                computerChoice = "scissors"
-            }
-
-            return computerChoice;
-        }
-
-        function getInput () {
-            let playerChoice = prompt("Rock, Paper, or Scissors?");
-            playerChoice = playerChoice.toLowerCase();
-
-            return playerChoice;
-        }
-
-        function PlayGame () {
-            playerChoice = getInput();
-            computerChoice = computerPlay();
-
-            let result;
-
-            if (playerChoice == "rock") {
-                if (computerChoice == "rock") {
-                    result = "DRAW";
-                } else if (computerChoice == "paper") {
-                    result = "LOSE";
-                } else if (computerChoice == "scissors") {
-                    result = "WIN";
-                }
-            } else if (playerChoice == "paper") {
-                if (computerChoice == "rock") {
-                    result = "WIN";
-                } else if (computerChoice == "paper") {
-                    result = "DRAW";
-                } else if (computerChoice == "scissors") {
-                    result = "LOSE";
-                }
-            } else if (playerChoice == "scissors") {
-                if (computerChoice == "rock") {
-                    result = "LOSE";
-                } else if (computerChoice == "paper") {
-                    result = "WIN";
-                } else if (computerChoice == "scissors") {
-                    result = "DRAW";
-                }
-            }
-
-            console.log(result);
-            return result;
-        }
-
-        function game () {
-            for (let i = 0; i < 5; i++) {
-                PlayGame();
-            }
-        }
-
-        game();
-    </script>
+    <head>
+        <script src="rock-paper-scissors.js" async></script>
+        <link rel="stylesheet" href="rock-paper-scissors.css">
+    </head>
+    <body>
+        <header>
+            <h1>Rock-Paper-Scissors!</h1>
+        </header>
+        <main>
+            <div id="inputs">
+                <button type="button" id="button-rock">
+                    <img class="button-img" src="images/rock.png">
+                </button>
+                <button type="button" id="button-paper">
+                    <img class="button-img" src="images/paper.png">
+                </button>
+                <button type="button" id="button-scissors">
+                    <img class="button-img" src="images/scissors.png">
+                </button>
+            </div>
+            
+            <div id="display" class="do-not-display">
+                <div class="choice-display" id="player-display">
+                    <h2 id="player-text"></h2>
+                    <img id="player-choice" class="choice-img">
+                </div>
+                <div class="choice-display" id="ai-display">
+                    <h2 id="ai-text"></h2>
+                    <img id="ai-choice" class="choice-img">
+                </div>
+            </div>
+            
+            
+        </main>
+    </body>
 </html>

@@ -1,0 +1,108 @@
+:root {
+    --choice-win-color: rgba(0, 255, 0, .3);
+    --choice-draw-color: rgba(122, 0, 122, .3);
+    --choice-lose-color: rgba(255, 0, 0, .3);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+
+    background-color: #272727;
+}
+
+header {
+    color: black;
+    text-align: center;
+    font-size: 32px;
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+header h1 {
+    margin: 12px auto;
+}
+
+main {
+    margin: 36px 16px 16px 16px;
+}
+
+#display {
+    width: 56%;
+    margin: 24px auto;
+    background-color: #f5f5f5;
+    border: 8px solid white;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#display[class] {
+    display: none;
+}
+
+.choice-display {
+    height: 512px;
+    width: 512px;
+    border: 1px solid black;
+    display: flex;
+}
+
+.choice-display h2 {
+    position: absolute;
+    transform: translate(200px, 16px);
+    font-size: 32px;
+}
+
+.choice-img {
+    width: 360px;
+    height: 360px;
+    margin: auto;
+}
+
+.choice-img {
+    display: none;
+}
+
+.choice-img[src] {
+    display: block;
+}
+
+#result {
+    text-align: center;
+    font-size: 48px;
+
+    margin: auto;
+    position: absolute;
+    transform: translateY(32px);
+}
+
+#result h2 {
+    color: white;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: black;
+}
+
+#inputs {
+    width: 60%;
+    margin: auto;
+    padding: 24px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#inputs button {
+    height: 162px;
+    width: 162px;
+}
+
+#inputs button > img {
+    width: 128px;
+    height: 128px;
+}
+
+.do-not-display {
+    display: none;
+}
